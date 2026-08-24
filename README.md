@@ -1,7 +1,7 @@
 # FutureTST Hourly Streamflow Forecasting Demo
 
 Multi-step hourly streamflow forecasting on CAMELS-H data with FutureTST, an
-encoder-decoder Transformer that conditions on known future meteorological
+encoder-decoder Transformer that conditions on future meteorological
 inputs. The pipeline covers preprocessing, training, and evaluation.
 
 ## Layout
@@ -72,3 +72,7 @@ Date splits (editable at the top of `preprocess_camelsh_forecast.py`):
 - `diffusion_forecast/output/denorm/` — denormalized prediction vs observation CSVs and per-basin metrics (NSE, KGE, RMSE, ...)
 - `diffusion_forecast/output/figure/` — prediction vs observation plots per basin
 - `diffusion_forecast/results/` — model checkpoints
+
+## Acknowledgement
+
+This work was supported by the U.S. Department of Energy's Hydropower and Hydrokinetic Office (H2O). We gratefully acknowledge this support for the development of machine-learning methods for hydropower inflow forecasting.
