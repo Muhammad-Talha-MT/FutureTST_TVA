@@ -1,12 +1,10 @@
-# FutureTST for Hourly Streamflow Forecasting in the Tennessee Valley
+# FutureTST for Hourly Streamflow Forecasting in the Tennessee Valley Authority (TVA) Region
 
-Machine-learning code for hourly streamflow forecasting in the Tennessee
-Valley region, developed to support hydropower inflow forecasting. The model
-is FutureTST, an encoder-decoder Transformer that conditions on known future
-meteorological inputs to predict streamflow up to 18 hours ahead. The
-repository contains the complete pipeline — preprocessing, training, and
-evaluation — on CAMELS-H hourly data, and includes a 5-basin subset of the
-data so the full workflow can be run directly after cloning.
+FutureTST is a Transformer-based AI model for time-series forecasting, developed here for operational hydropower inflow forecasting in the Tennessee Valley Authority (TVA) region. It uses an encoder–decoder architecture that integrates historical meteorological and streamflow observations with future meteorological forecasts to predict streamflow up to 18 hours ahead.
+
+The repository provides a complete workflow—including data preprocessing, model training, evaluation, and visualization—using CAMELS-H hourly data. A five-basin subset is included so that the entire workflow can be run immediately after cloning the repository.
+
+Although the examples in this repository focus on hourly streamflow forecasting, FutureTST is designed as a flexible forecasting framework. It can be applied at different temporal resolutions and trained either as a regional model using data from multiple catchments or as a catchment-specific model. The architecture can also be adapted to different data-availability scenarios by including or excluding historical streamflow observations and future meteorological forcings, depending on the forecasting application and research needs.
 
 ## Layout
 
@@ -119,28 +117,14 @@ Date splits (editable at the top of `preprocess_camelsh_forecast.py`):
 ## FAQ
 
 **What model is this?**
-FutureTST, an encoder-decoder Transformer for time series forecasting. Its
-distinguishing feature is that the decoder attends to the exogenous inputs
-over the forecast horizon as well as the history, so known future
-meteorological forcings inform the streamflow prediction. There is no
-diffusion component.
+FutureTST is an encoder–decoder Transformer for time-series forecasting. It integrates historical meteorological observations, future meteorological forecasts, and historical streamflow data to improve streamflow prediction. The architecture employs two encoders to process historical and future meteorological drivers and a decoder to process historical streamflow. A cross-temporal fusion module denoises and integrates the encoder representations, while the decoder uses cross-attention to combine the fused meteorological information with historical streamflow for future streamflow forecasting.
 
 **Does the code download CAMELS-H data automatically?**
-No. Everything runs offline. The repo ships with the 5-basin parquet, and
-`run_forecast.sh` takes it through preprocessing, training, evaluation, and
-plotting. For the full experiments, download a dataset from the OneDrive
-link above and pass it with `--parquet`.
+No. Everything runs offline. The repository includes the 5-basin Parquet dataset, and run_forecast.sh runs the complete workflow, including preprocessing, training, evaluation, and visualization. For the full experiments, download the dataset from the OneDrive link above and specify it using the --parquet option.
 
 **How many basins were used in the study?**
-Two configurations: a single model trained jointly on the 130 Tennessee
-Valley basins, and a single model trained jointly on 618 basins (the 130 TVA
-basins plus 488 auxiliary basins; see "Basin selection"). Both datasets are
-on OneDrive and both runs use the same script, differing only in the
-`--parquet` argument. The 5 included basins are TVA basins with high
-observation coverage.
+Two configurations are provided: (1) a single model jointly trained on 130 Tennessee Valley Authority (TVA) basins, and (2) a single model jointly trained on 618 basins, including the 130 TVA basins and 488 auxiliary basins (see “Basin Selection”). Both datasets are available on OneDrive, and both configurations use the same training script, differing only in the --parquet argument. The five basins included with the repository are TVA basins with high observational coverage.
 
 ## Acknowledgement
 
-This work was supported by the U.S. Department of Energy's Hydropower and
-Hydrokinetic Office (H2O). We gratefully acknowledge this support for the
-development of machine-learning methods for hydropower inflow forecasting.
+This work was supported by the U.S. Department of Energy's Hydropower and Hydrokinetic Office (H2O). We gratefully acknowledge this support for the development of machine-learning methods for hydropower inflow forecasting.
