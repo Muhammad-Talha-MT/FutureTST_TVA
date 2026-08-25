@@ -64,22 +64,11 @@ and cumulative potential evaporation, for 44 input features in total.
 
 ## Basin selection
 
-The study uses two training configurations. The first trains a single
-FutureTST model jointly on the 130 basins of the Tennessee Valley region.
-The second trains jointly on 618 basins: the 130 TVA basins plus 488
-auxiliary basins drawn from the full CAMELS-H archive (~9,000 gauges).
-Auxiliary basins were required to have at least 97% hourly streamflow
-completeness and were then ranked by hydroclimatic similarity to the
-Tennessee Valley basins using standard catchment attributes (aridity index,
-mean precipitation, snow fraction, elevation, slope, drainage area). This
-supplies the model with additional training basins whose rainfall-runoff
-behavior is transferable to the Tennessee Valley region while keeping noisy
-hourly records out of training.
+The study considers two regional training configurations. The first trains a single FutureTST model jointly across 130 basins in the TVA region. The second expands the training domain to 618 basins, consisting of the 130 TVA basins and 488 auxiliary basins selected from the full CAMELS-H archive (~9,000 gauges).
 
-The included dataset (`data/camelsh_demo.parquet`) is a 5-basin subset of
-the Tennessee Valley basins, chosen for their high streamflow observation
-coverage, so the repository can be cloned and run end-to-end without
-downloading the full dataset.
+The auxiliary basins were selected using both data quality and hydroclimatic similarity. Basins were first required to have at least 97% completeness in their hourly streamflow records. The remaining basins were then ranked according to their hydroclimatic similarity to the TVA basins using standard catchment attributes, including aridity index, mean precipitation, snow fraction, elevation, slope, and drainage area. This selection strategy expands the diversity and volume of training data while prioritizing basins with hydrologic characteristics relevant to the Tennessee River Basin and excluding basins with substantial gaps in their hourly streamflow records.
+
+For demonstration purposes, the repository includes data/camelsh_demo.parquet, a five-basin subset of the TVA dataset selected for high streamflow observation coverage. This lightweight dataset allows the complete FutureTST workflow—from preprocessing and training to evaluation and visualization—to be run immediately after cloning the repository, without downloading the full datasets.
 
 ## Full datasets
 
