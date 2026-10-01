@@ -1,0 +1,67 @@
+collection,node_id,variable,long_name,units,role,dims
+Observed_1H,NWPT1,QPE_to_MAP_MAP_[],Precipitation Areal Mean,MM,observed_precipitation,time
+Observed_1H,NWPT1,Preprocess_HG_to_QR_HG_[],River Stage,M,observed_stage,time
+Observed_1H,NWPT1,Preprocess_HG_to_QR_QR_[],River Flow,CMS,observed_flow,time
+Observed_6H,NWPT1,"LOCAL_NWPT1_Observed_QR_[""Loc""]",Estimated Local Flow,CMS,observed_flow,time
+Forecast_1H,NWPT1,"LAGK_DUGT1_NWPT1_Forecast_QR_[""Rtd"",""Sim""]_main",Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,NWPT1,MergeMAP_FrenchBroad_Forecast_MAP_[]_main,Precipitation Areal Mean,MM,forecast_precipitation,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,NWPT1,"SUM_LAGK_NWPT1_Forecast_QR_[""Rtd"",""Sim""]_main",Sum Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,NWPT1,"TOTAL_NWPT1_Forecast_QR_[""Sim""]_main",Simulated Total Flow (Sum Routed Flow + Simulated Local Flow),CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,NWPT1,"ADJUSTQ_NWPT1_Forecast_QR_[""Adj""]_main",Adjusted River Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Observed_1H,HSPN7,QPE_to_MAP_MAP_[],Precipitation Areal Mean,MM,observed_precipitation,time
+Observed_1H,HSPN7,Preprocess_HG_to_QR_HG_[],River Stage,M,observed_stage,time
+Observed_1H,HSPN7,Preprocess_HG_to_QR_QR_[],River Flow,CMS,observed_flow,time
+Forecast_6H,HSPN7,MergeMAP_FrenchBroad_Forecast_MAP_[]_main,Precipitation Areal Mean,MM,forecast_precipitation,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,HSPN7,"LAGK_NWPT1_HSPN7_Forecast_QR_[""Rtd"",""Sim""]_main",Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,HSPN7,"SUM_LAGK_HSPN7_Forecast_QR_[""Rtd"",""Sim""]_main",Sum Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,HSPN7,"TOTAL_HSPN7_Forecast_QR_[""Sim""]_main",Simulated Total Flow (Sum Routed Flow + Simulated Local Flow),CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,HSPN7,"ADJUSTQ_HSPN7_Forecast_QR_[""Adj""]_main",Adjusted River Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Observed_1H,MARN7,QPE_to_MAP_MAP_[],Precipitation Areal Mean,MM,observed_precipitation,time
+Observed_1H,MARN7,Preprocess_HG_to_QR_HG_[],River Stage,M,observed_stage,time
+Observed_1H,MARN7,Preprocess_HG_to_QR_QR_[],River Flow,CMS,observed_flow,time
+Observed_6H,MARN7,"LOCAL_MARN7_Observed_QR_[""Loc""]",Estimated Local Flow,CMS,observed_flow,time
+Forecast_6H,MARN7,MergeMAP_FrenchBroad_Forecast_MAP_[]_main,Precipitation Areal Mean,MM,forecast_precipitation,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,MARN7,"LAGK_HSPN7_MARN7_Forecast_QR_[""Rtd"",""Sim""]_main",Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,MARN7,"SUM_LAGK_MARN7_Forecast_QR_[""Rtd"",""Sim""]_main",Sum Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,MARN7,"TOTAL_MARN7_Forecast_QR_[""Sim""]_main",Simulated Total Flow (Sum Routed Flow + Simulated Local Flow),CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,MARN7,"ADJUSTQ_MARN7_Forecast_QR_[""Adj""]_main",Adjusted River Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Observed_1H,IVYN7,QPE_to_MAP_MAP_[],Precipitation Areal Mean,MM,observed_precipitation,time
+Forecast_6H,IVYN7,MergeMAP_FrenchBroad_Forecast_MAP_[]_main,Precipitation Areal Mean,MM,forecast_precipitation,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,IVYN7,"LAGK_MARN7_IVYN7_Forecast_QR_[""Rtd"",""Sim""]_main",Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,IVYN7,"ADJUSTQ_IVYN7_Forecast_QR_[""Adj""]_main",Adjusted River Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Observed_1H,AVLN7,QPE_to_MAP_MAP_[],Precipitation Areal Mean,MM,observed_precipitation,time
+Observed_1H,AVLN7,Preprocess_HG_to_QR_HG_[],River Stage,M,observed_stage,time
+Observed_1H,AVLN7,Preprocess_HG_to_QR_QR_[],River Flow,CMS,observed_flow,time
+Observed_6H,AVLN7,"LOCAL_AVLN7_Observed_QR_[""Loc""]",Estimated Local Flow,CMS,observed_flow,time
+Forecast_6H,AVLN7,MergeMAP_FrenchBroad_Forecast_MAP_[]_main,Precipitation Areal Mean,MM,forecast_precipitation,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,AVLN7,"LAGK_MARN7_AVLN7_Forecast_QR_[""Rtd"",""Sim""]_main",Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,AVLN7,"SUM_LAGK_AVLN7_Forecast_QR_[""Rtd"",""Sim""]_main",Sum Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,AVLN7,"TOTAL_AVLN7_Forecast_QR_[""Sim""]_main",Simulated Total Flow (Sum Routed Flow + Simulated Local Flow),CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,AVLN7,"ADJUSTQ_AVLN7_Forecast_QR_[""Adj""]_main",Adjusted River Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Observed_1H,BLTN7,QPE_to_MAP_MAP_[],Precipitation Areal Mean,MM,observed_precipitation,time
+Observed_1H,BLTN7,Preprocess_HG_to_QR_HG_[],River Stage,M,observed_stage,time
+Observed_1H,BLTN7,Preprocess_HG_to_QR_QR_[],River Flow,CMS,observed_flow,time
+Forecast_6H,BLTN7,MergeMAP_FrenchBroad_Forecast_MAP_[]_main,Precipitation Areal Mean,MM,forecast_precipitation,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,BLTN7,"LAGK_AVLN7_BLTN7_Forecast_QR_[""Rtd"",""Sim""]_main",Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,BLTN7,"ADJUSTQ_BLTN7_Forecast_QR_[""Adj""]_main",Adjusted River Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Observed_1H,FLCN7,QPE_to_MAP_MAP_[],Precipitation Areal Mean,MM,observed_precipitation,time
+Forecast_6H,FLCN7,MergeMAP_FrenchBroad_Forecast_MAP_[]_main,Precipitation Areal Mean,MM,forecast_precipitation,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,FLCN7,"LAGK_AVLN7_FLCN7_Forecast_QR_[""Rtd"",""Sim""]_main",Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,FLCN7,"SUM_LAGK_FLCN7_Forecast_QR_[""Rtd"",""Sim""]_main",Sum Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,FLCN7,"TOTAL_FLCN7_Forecast_QR_[""Sim""]_main",Simulated Total Flow (Sum Routed Flow + Simulated Local Flow),CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,FLCN7,"ADJUSTQ_FLCN7_Forecast_QR_[""Adj""]_main",Adjusted River Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Observed_1H,BLAN7,QPE_to_MAP_MAP_[],Precipitation Areal Mean,MM,observed_precipitation,time
+Observed_1H,BLAN7,Preprocess_HG_to_QR_HG_[],River Stage,M,observed_stage,time
+Observed_1H,BLAN7,Preprocess_HG_to_QR_QR_[],River Flow,CMS,observed_flow,time
+Observed_6H,BLAN7,"LOCAL_BLAN7_Observed_QR_[""Loc""]",Estimated Local Flow,CMS,observed_flow,time
+Forecast_6H,BLAN7,MergeMAP_FrenchBroad_Forecast_MAP_[]_main,Precipitation Areal Mean,MM,forecast_precipitation,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,BLAN7,"LAGK_FLCN7_BLAN7_Forecast_QR_[""Rtd"",""Sim""]_main",Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,BLAN7,"SUM_LAGK_BLAN7_Forecast_QR_[""Rtd"",""Sim""]_main",Sum Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,BLAN7,"TOTAL_BLAN7_Forecast_QR_[""Sim""]_main",Simulated Total Flow (Sum Routed Flow + Simulated Local Flow),CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,BLAN7,"ADJUSTQ_BLAN7_Forecast_QR_[""Adj""]_main",Adjusted River Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Observed_1H,ROSN7,QPE_to_MAP_MAP_[],Precipitation Areal Mean,MM,observed_precipitation,time
+Observed_1H,ROSN7,Preprocess_HG_to_QR_HG_[],River Stage,M,observed_stage,time
+Observed_1H,ROSN7,Preprocess_HG_to_QR_QR_[],River Flow,CMS,observed_flow,time
+Forecast_6H,ROSN7,MergeMAP_FrenchBroad_Forecast_MAP_[]_main,Precipitation Areal Mean,MM,forecast_precipitation,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,ROSN7,"LAGK_BLAN7_ROSN7_Forecast_QR_[""Rtd"",""Sim""]_main",Routed Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time
+Forecast_6H,ROSN7,"ADJUSTQ_ROSN7_Forecast_QR_[""Adj""]_main",Adjusted River Flow,CMS,forecast_flow,forecast_time x ensembleId x ensembleMemberId x lead_time

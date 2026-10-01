@@ -1,0 +1,12 @@
+
+# Python generated files
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated datasets
+data_processing/data/
+
+# Model outputs and evaluation results
+futuretst/output/
+futuretst/results/

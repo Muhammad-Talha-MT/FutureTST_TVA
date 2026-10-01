@@ -1,0 +1,10 @@
+node_id,camelsh_gauge,station_name,river,state,longitude,latitude,usgs_id_attr,has_Observed_1H,has_Observed_6H,has_Forecast_1H,has_Forecast_6H,has_observed_flow,has_observed_precipitation,has_forecast_flow,has_forecast_precipitation
+NWPT1,03455000,French Broad near Newport,French Borad,TN,-83.1612083,35.98151389,03455000,True,True,True,True,True,True,True,True
+HSPN7,,French Broad at Hot Springs,French Broad,NC,-82.821,35.88991667,03454500,True,False,False,True,True,True,True,True
+MARN7,03453500,French Broad at Marshall,French Broad,NC,-82.6608333,35.78638889,03453500,True,True,False,True,True,True,True,True
+IVYN7,03453000,Ivy at Marshall,Ivy,NC,-82.6208333,35.7697222,,True,False,False,True,False,True,True,True
+AVLN7,03451500,French Broad at Asheville,French Broad,NC,-82.5780556,35.60888889,03451500,True,True,False,True,True,True,True,True
+BLTN7,03451000,Swannanoa @ Biltmore,Swannanoa,NC,-82.5447222,35.5683333,03451000,True,False,False,True,True,True,True,True
+FLCN7,03447687,French Broad at Fletcher,French Broad,NC,-82.5525,35.42916667,,True,False,False,True,False,True,True,True
+BLAN7,03443000,French Broad @ Blantyre,French Broad,NC,-82.6238889,35.29916667,03443000,True,True,False,True,True,True,True,True
+ROSN7,03439000,French Broad @ Rosman,French Broad,NC,-82.824722,35.143333,03439000,True,False,False,True,True,True,True,True
